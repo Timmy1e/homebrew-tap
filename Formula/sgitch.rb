@@ -5,6 +5,12 @@ class Sgitch < Formula
   sha256 "ec1be926cddee26021820aedcc26bb6f690ce231ba10abf4d09118570bbc11d1"
   license "AGPL-3.0-or-later"
 
+  bottle do
+    root_url "https://ghcr.io/v2/timmy1e/tap"
+    sha256 cellar: :any_skip_relocation, big_sur:      "1bda557e7a02db12f22d58405d19b7b0e473673e062c315b126081ab8d288145"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "908e7c02e7f8b2c0ad9dae7c823efb3a8989cda7b3a784971dcbf11d6f6479f1"
+  end
+
   depends_on "go" => :build
 
   def install
