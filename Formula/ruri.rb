@@ -1,16 +1,13 @@
 class Ruri < Formula
   desc "Calculates the CRC-32 of files and checks them against their filename"
   homepage "https://gitlab.com/Timmy1e/ruri/"
-  url "https://gitlab.com/Timmy1e/ruri/-/archive/v2.0.1/ruri-v2.0.1.tar.gz"
-  sha256 "ef7883661b0f145b6bf9b7d6be172b2c17198003625f28ce7950065d489f5a20"
+  url "https://gitlab.com/Timmy1e/ruri/-/archive/v2.1.0/ruri-v2.1.0.tar.gz"
+  sha256 "30ce2f395e3bfcf4891ef544f139d072466b8fff00b832a02d32bed4aa952f49"
   license "AGPL-3.0-or-later"
 
   bottle do
     root_url "https://ghcr.io/v2/timmy1e/tap"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2b65c9669d4d83c4318dc88f0b073689cc329d813bec7147312fa2287b461821"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4ccdfaf2ee7fec0a8918e3153d11dcfccc7fcb3ece13782714fb2067b4841fd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c9b8244aff3da4495db47bc1a44620badfdc464be85abbee7108c15ac070c57"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c222b6f155325cd8d52160491f7878440b423a0cf41b9915548d4067287819b8"
   end
 
   head do
