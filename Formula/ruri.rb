@@ -5,6 +5,11 @@ class Ruri < Formula
   sha256 "30ce2f395e3bfcf4891ef544f139d072466b8fff00b832a02d32bed4aa952f49"
   license "AGPL-3.0-or-later"
 
+  bottle do
+    root_url "https://ghcr.io/v2/timmy1e/tap"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c222b6f155325cd8d52160491f7878440b423a0cf41b9915548d4067287819b8"
+  end
+
   head do
     url "https://gitlab.com/Timmy1e/ruri.git", branch: "master"
   end
