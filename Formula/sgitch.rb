@@ -7,8 +7,10 @@ class Sgitch < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/timmy1e/tap"
-    sha256 cellar: :any_skip_relocation, big_sur:      "1bda557e7a02db12f22d58405d19b7b0e473673e062c315b126081ab8d288145"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "908e7c02e7f8b2c0ad9dae7c823efb3a8989cda7b3a784971dcbf11d6f6479f1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0dd90601a552716842bc1f88fca0ecfd947c77ed4e820c3075a7e1524504c640"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "54292a315e87bbb980e75c589315195ed94b7c51aa980ca4a23e278eb8a15a5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40f678a2f782ed2a162d78b9cdacf07441531a21a058c547e28c60fbde193eb3"
   end
 
   depends_on "go" => :build
@@ -22,7 +24,7 @@ class Sgitch < Formula
       "Successfully created config file at \"new_config.yml\".\n",
       shell_output("#{bin}/sgitch --config new_config.yml init"),
     )
-    assert_predicate testpath/"new_config.yml", :exist?
+    assert_path_exists "new_config.yml"
 
     File.write("test_config.yml", "profiles:
   profile1:

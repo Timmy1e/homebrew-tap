@@ -1,17 +1,15 @@
 class Ruri < Formula
   desc "Calculates the CRC-32 of files and checks them against their filename"
   homepage "https://gitlab.com/Timmy1e/ruri/"
-  url "https://gitlab.com/Timmy1e/ruri/-/archive/v2.1.0/ruri-v2.1.0.tar.gz"
-  sha256 "30ce2f395e3bfcf4891ef544f139d072466b8fff00b832a02d32bed4aa952f49"
+  url "https://gitlab.com/Timmy1e/ruri/-/archive/v2.1.1/ruri-v2.1.1.tar.gz"
+  sha256 "5a2341444a6165360035f1b6e04d782f2bcc79fc46d13502166108093691a3b1"
   license "AGPL-3.0-or-later"
 
   bottle do
     root_url "https://ghcr.io/v2/timmy1e/tap"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "c222b6f155325cd8d52160491f7878440b423a0cf41b9915548d4067287819b8"
-  end
-
-  head do
-    url "https://gitlab.com/Timmy1e/ruri.git", branch: "master"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "36ad832de92a83d0ced4af720167d5f74f4327165d19c63e782871b46c40ea9f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "96a56bed2205af2d82a53900225b8a3d44397fef7b1c1b66c151c2332ac358e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab6addacc2401e5a1b25b663221f3385be7d2b15d9eb63aed45d57a1615186b2"
   end
 
   depends_on "rust" => :build
