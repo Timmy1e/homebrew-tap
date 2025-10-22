@@ -22,7 +22,7 @@ class Sgitch < Formula
       "Successfully created config file at \"new_config.yml\".\n",
       shell_output("#{bin}/sgitch --config new_config.yml init"),
     )
-    assert_predicate testpath/"new_config.yml", :exist?
+    assert_path_exists "new_config.yml"
 
     File.write("test_config.yml", "profiles:
   profile1:

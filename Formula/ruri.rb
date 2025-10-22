@@ -5,10 +5,6 @@ class Ruri < Formula
   sha256 "5a2341444a6165360035f1b6e04d782f2bcc79fc46d13502166108093691a3b1"
   license "AGPL-3.0-or-later"
 
-  head do
-    url "https://gitlab.com/Timmy1e/ruri.git", branch: "master"
-  end
-
   depends_on "rust" => :build
 
   def install
